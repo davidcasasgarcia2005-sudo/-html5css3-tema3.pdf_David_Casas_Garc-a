@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de HTML5 y CSS3 - Vídeos</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/reproductor.css">
+    <script src="reproductor.js"></script>
+</head>
+<body>
+    <div id="page">
+        <header>
+            <div style="position: relative;">
+                <img src="imgs/logo.png" alt="Logo" id="logo-header">
+                <h1>Curso de HTML5 y CSS3</h1>
+            </div>
+        </header>
+
+        <nav>
+            <ul>
+                <li id="contenidos"><a href="index.html">Contenidos</a></li>
+                <li id="videos">
+                    <a href="videos.html">Videos</a>
+                    <ul>
+                        <li><a href="#" onclick="cambiarVideo('media/trailer.mp4')">Vídeo 1</a></li>
+                        <li><a href="#" onclick="cambiarVideo('media/trailer.mp4')">Vídeo 2</a></li>
+                        <li><a href="#" onclick="cambiarVideo('media/trailer.mp4')">Vídeo 3</a></li>
+                    </ul>
+                </li>
+                <li id="contacto"><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <main id="content" style="display: block; overflow: hidden;">
+            <section id="reproductor">
+                <video id="medio" width="700">
+                    <source src="media/trailer.mp4" type="video/mp4">
+                    <source src="media/trailer.ogg" type="video/ogg">
+                </video>
+                <div id="barra">
+                    <div id="progreso"></div>
+                </div>
+            </section>
+
+            <nav>
+                <input type="button" id="reiniciar" value="reiniciar">
+                <input type="button" id="retrasar" value="&laquo;">
+                <input type="button" id="play" value="&#x25BA;">
+                <input type="button" id="adelantar" value="&raquo;">
+                <input type="button" id="silenciar" value="silenciar">
+                <label>Volumen</label>
+                <input type="button" id="menosVolumen" value="-">
+                <input type="button" id="masVolumen" value="+">
+            </nav>
+        </main>
+
+        <div id="footer">
+            <p>David Casas García &copy; 2026. Curso de HTML5 y CSS3.</p>
+        </div>
+    </div>
+</body>
+</html>
